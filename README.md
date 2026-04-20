@@ -1,4 +1,4 @@
-EgcSimu Vue3
+# EgcSimu Vue3
 
 By b站水杨酸酸
 
@@ -7,20 +7,20 @@ By b站水杨酸酸
 界面比原始版本更美观合理，因为我在做以前那个的时候刚学原生前端。
 本项目易于维护（TS），欢迎贡献代码。
 
-立刻使用
+## 立刻使用
 
-访问https://eggyhub.top/egcs立刻使用本编辑器，无需下载部署。
+访问 [https://eggyhub.top/egcs](https://eggyhub.top/egcs) 立刻使用本编辑器，无需下载部署。
 
-启动方式
-安装Node.js
-npm install
-npm run dev（本地立刻启用）
-访问http://localhost:5173
+## 启动方式
+- 安装Node.js
+- npm install
+- npm run dev（本地立刻启用）
+- 访问 [http://localhost:5173](http://localhost:5173)
 
-npm run build（打包项目）
-在dist目录下生成打包后的前端文件。
+- npm run build（打包项目）
+- 在dist目录下生成打包后的前端文件。
 
-使用说明
+## 使用说明
 
 你可以根据蛋码编辑器的使用方法来进行拼蛋码，保存，撤回等操作。
 如果发现部分类型错误，是正常现象，可反馈。
