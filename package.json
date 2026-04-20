@@ -1,0 +1,27 @@
+{
+  "name": "egc-vue3",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "mitt": "^3.0.1",
+    "vue": "^3.5.25"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@vitejs/plugin-vue": "^6.0.2",
+    "@vue/tsconfig": "^0.8.1",
+    "sass": "^1.97.3",
+    "typescript": "~5.9.3",
+    "vite": "^8.0.0-beta.13",
+    "vue-tsc": "^3.1.5"
+  },
+  "overrides": {
+    "vite": "^8.0.0-beta.13"
+  }
+}

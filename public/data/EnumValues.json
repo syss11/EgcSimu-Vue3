@@ -1,0 +1,154 @@
+{
+    "EnumValues": [
+        {
+            "name": "玩家1",
+            "return_type": "玩家",
+            "prefabid": "10001"
+        },
+        {
+            "name": "玩家2",
+            "return_type": "玩家",
+            "prefabid": "10002"
+        },
+        {
+            "name": "玩家3",
+            "return_type": "玩家",
+            "prefabid": "10003"
+        },
+        {
+            "name": "玩家4",
+            "return_type": "玩家",
+            "prefabid": "10004"
+        },
+        {
+            "name": "玩家5",
+            "return_type": "玩家",
+            "prefabid": "10005"
+        },
+        {
+            "name": "玩家6",
+            "return_type": "玩家",
+            "prefabid": "10006"
+        },
+        {
+            "name": "角色蛋仔1",
+            "return_type": "角色",
+            "prefabid": "10007"
+        },
+        {
+            "name": "角色蛋仔2",
+            "return_type": "角色",
+            "prefabid": "10008"
+        },
+        {
+            "name": "角色蛋仔3",
+            "return_type": "角色",
+            "prefabid": "10009"
+        },
+        {
+            "name": "角色蛋仔4",
+            "return_type": "角色",
+            "prefabid": "10010"
+        },
+        {
+            "name": "角色蛋仔5",
+            "return_type": "角色",
+            "prefabid": "10011"
+        },
+        {
+            "name": "角色蛋仔6",
+            "return_type": "角色",
+            "prefabid": "10012"
+        },
+        {
+            "name": "等于",
+            "return_type": "数值比较符",
+            "prefabid": "20000"
+        },
+        {
+            "name": "大于",
+            "return_type": "数值比较符",
+            "prefabid": "20001"
+        },
+        {
+            "name": "小于",
+            "return_type": "数值比较符",
+            "prefabid": "20002"
+        },
+        {
+            "name": "大于等于",
+            "return_type": "数值比较符",
+            "prefabid": "20003"
+        },
+        {
+            "name": "小于等于",
+            "return_type": "数值比较符",
+            "prefabid": "20004"
+        },
+        {
+            "name": "开",
+            "return_type": "布尔值",
+            "prefabid": "20005"
+        },
+        {
+            "name": "关",
+            "return_type": "布尔值",
+            "prefabid": "20006"
+        },
+        {
+            "name": "进入",
+            "return_type": "触发区域类型",
+            "prefabid": "30000"
+        },
+        {
+            "name": "离开",
+            "return_type": "触发区域类型",
+            "prefabid": "30001"
+        },
+        {
+            "name": "输入字符串",
+            "return_type": "字符串",
+            "prefabid": "30002"
+        },
+        {
+            "name": "输入整数",
+            "return_type": "整数",
+            "prefabid": "30003"
+        },
+        {
+            "name": "输入定点数",
+            "return_type": "定点数",
+            "prefabid": "30004"
+        },
+        {
+            "name": "+",
+            "return_type": "运算符",
+            "prefabid": "40000"
+        },
+        {
+            "name": "-",
+            "return_type": "运算符",
+            "prefabid": "40001"
+        },
+        {
+            "name": "*",
+            "return_type": "运算符",
+            "prefabid": "40002"
+        },
+        {
+            "name": "/",
+            "return_type": "运算符",
+            "prefabid": "40003"
+        },
+        {
+            "name": "%",
+            "return_type": "运算符",
+            "prefabid": "40004"
+        },
+        {
+            "name": "^",
+            "return_type": "运算符",
+            "prefabid": "40005"
+        }
+    ]
+}

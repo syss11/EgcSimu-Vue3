@@ -1,0 +1,111 @@
+{
+  "document": {
+    "controllers": [
+      {
+        "name": "重复执行",
+        "id": "重复执行",
+        "description": "重复{#0}次",
+        "parameters": [
+          "整数"
+        ],
+        "sub_vacancies_count": 1,
+        "explanation": "一次重复的次数如果过大会导致游戏变卡",
+        "prefabid": 1
+      },
+      {
+        "name": "如果/否则",
+        "id": "如果-否则-",
+        "description": "如果{#0}",
+        "parameters": [
+          "布尔值"
+        ],
+        "sub_vacancies_count": 2,
+        "explanation": "通过条件来区分不同的情况下，执行什么样的动作，完成不同的逻辑",
+        "prefabid": 2
+      },
+      {
+        "name": "遍历列表",
+        "id": "遍历列表",
+        "description": "选取{#0}, 并执行动作",
+        "parameters": [
+          "all列表"
+        ],
+        "sub_vacancies_count": 1,
+        "explanation": "遍历会从列表的第一个元素开始到最后一个元素截止，通过表达式遍历的某某值来获得当前遍历的元素",
+        "prefabid": 3
+      },
+      {
+        "name": "遍历整数",
+        "id": "遍历整数",
+        "description": "从{#0}遍历到{#1}, 每次增加{#2}，执行动作",
+        "parameters": [
+          "整数",
+          "整数",
+          "整数"
+        ],
+        "sub_vacancies_count": 1,
+        "explanation": "每次遍历都会让遍历的数增加。注意，从1遍历到4，每次增加1，实际上运行过程是：1，2，3",
+        "prefabid": 4
+      },
+      {
+        "name": "遍历表格的行",
+        "id": "遍历表格的行",
+        "description": "遍历{#0}的行，并执行动作",
+        "parameters": [
+          "表格"
+        ],
+        "sub_vacancies_count": 1,
+        "explanation": "将表格的行进行遍历，获得所有的行数信息",
+        "prefabid": 5
+      },
+      {
+        "name": "遍历表格的列",
+        "id": "遍历表格的列",
+        "description": "遍历{#0}的列，并执行动作",
+        "parameters": [
+          "表格"
+        ],
+        "sub_vacancies_count": 1,
+        "explanation": "将表格的列进行遍历，获得所有的列数信息",
+        "prefabid": 6
+      },
+      {
+        "name": "子触发器",
+        "id": "子触发器",
+        "description": "子触发器",
+        "parameters": [
+        ],
+        "sub_vacancies_count": 2,
+        "explanation": "",
+        "prefabid": 7
+      },
+      {
+        "name": "运行计时器",
+        "id": "运行计时器",
+        "description": "经过{#0}秒执行下列动作，执行{#1}次，是否立刻执行{#2}",
+        "parameters": [
+          "定点数",
+          "整数",
+          "布尔值"
+        ],
+        "sub_vacancies_count": 1,
+        "explanation": "执行次数为-1时表示无限次数",
+        "prefabid": 8
+      },
+      {
+        "name": "运行帧计时器",
+        "id": "运行帧计时器",
+        "description": "经过{#0}帧执行下列动作，执行{#1}次，是否立刻执行{#2}",
+        "parameters": [
+          "整数",
+          "整数",
+          "布尔值"
+        ],
+        "sub_vacancies_count": 1,
+        "explanation": "执行次数为-1时表示无限次数",
+        "prefabid": 9
+      }
+    ],
+    "total_actions": 10
+  }
+}

@@ -1,0 +1,93 @@
+@use 'sass:map';
+
+$colors: (
+  white: (
+    50: #ffffff,
+    100: #f8f9fa,
+    200: #e9ecef,
+    300: #dee2e6,
+    400: #ced4da,
+    500: #adb5bd,
+    600: #6c757d,
+    700: #495057,
+    800: #343a40,
+    900: #212529
+  ),
+  ocean: (
+    50: #e3f2fd,
+    100: #bbdefb,
+    200: #90caf9,
+    300: #64b5f6,
+    400: #42a5f5,
+    500: #2196f3,
+    600: #1e88e5,
+    700: #1976d2,
+    800: #1565c0,
+    900: #0d47a1
+  ),
+  deep-ocean: (
+    50: #e0f7fa,
+    100: #b2ebf2,
+    200: #80deea,
+    300: #4dd0e1,
+    400: #26c6da,
+    500: #00bcd4,
+    600: #00acc1,
+    700: #0097a7,
+    800: #00838f,
+    900: #006064
+  )
+);
+
+$primary: map.get($colors, ocean, 500);
+$primary-dark: map.get($colors, ocean, 700);
+$secondary: map.get($colors, deep-ocean, 500);
+$background: map.get($colors, white, 50);
+$surface: #ffffff;
+$text-primary: map.get($colors, white, 900);
+$text-secondary: map.get($colors, white, 600);
+$border-color: map.get($colors, white, 300);
+
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
+
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-size-2xl: 24px;
+$font-size-3xl: 32px;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+$transition-fast: 150ms ease-in-out;
+$transition-normal: 300ms ease-in-out;
+$transition-slow: 500ms ease-in-out;
+
+$action-color: #4141ff;
+$event-color: rgb(255, 177, 21);
+$control-color: #a01efc;
+$value-color: rgb(56, 191, 29);
+$boolean-color: rgb(238, 106, 53);
+$selector-color: rgb(234, 243, 255);
+$variable-color: rgb(237, 29, 220);
+
+$vacancy-color: rgba(11, 47, 115, 0.722);

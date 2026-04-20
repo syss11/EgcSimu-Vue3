@@ -1,0 +1,107 @@
+@use './variables.scss' as *;
+
+.egcprefab {
+    cursor:pointer;
+    user-select: none;
+    text-align: left;
+    line-height: 45px;
+    height: 45px;
+    padding: 0 10px;
+    margin-bottom: 5px;
+    font-size:medium;
+    font-weight:bold;
+    color: aliceblue;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all $transition-fast;
+
+    &:hover {
+        filter: brightness(0.85);
+        transform: translateX(2px);
+    }
+
+    &-action {
+        
+        background-color: $action-color;
+        border-radius: 5px;
+    }
+
+    &-event {
+        background-color: $event-color;
+        border-radius: 5px 15px 15px 5px;
+    }
+
+    &-controll {
+        background-color: $control-color;
+        border-radius: 5px 15px;
+    }
+
+    &-value {
+        background-color: $value-color;
+        border-radius: 25px;
+    }
+
+    &-boolean {
+        background-color: $boolean-color;
+        border-radius: 25px;
+        padding-left: 10%;
+        clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+
+    }
+}
+
+
+.eggcodei {
+    cursor:pointer;
+    user-select: none;
+    text-align: left;
+    padding: 0 10px ;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    min-height: 45px;
+    font-size:medium;
+    font-weight:bold;
+    color: aliceblue;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all $transition-fast;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    &:hover {
+        filter: brightness(1.02);
+        transform: translateX(2px);
+    }
+
+    &-action {
+        
+        background-color: $action-color;
+        border-radius: 5px;
+    }
+
+    &-event {
+        background-color: $event-color;
+        border-radius: 5px 15px 15px 5px;
+    }
+
+    &-controll {
+        background-color: $control-color;
+        border-radius: 5px 15px;
+    }
+
+    &-value {
+        background-color: $value-color;
+        border-radius: 25px;
+    }
+
+    &-boolean {
+        background-color: $boolean-color;
+        border-radius: 25px;
+        
+    }
+}
+
+.variable {
+    background-color: $variable-color;
+}

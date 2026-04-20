@@ -1,0 +1,1778 @@
+{
+  "document": {
+    "events": [
+      {
+        "name": "接收自定义事件（附带玩家）",
+        "id": "接收自定义事件-附带玩家",
+        "description": "接收自定义事件{#0}（附带玩家）",
+        "parameters": [
+          "字符串"
+        ],
+        "explanation": "该事件拥有触发事件的玩家参数，可以获知是哪个玩家触发的事件。仅能接收角色进出区域或与界面控件进行互动的事件。",
+        "prefabid": 1745
+      },
+      {
+        "name": "关卡初始化",
+        "id": "关卡初始化",
+        "description": "游戏初始化",
+        "parameters": [
+          "定点数"
+        ],
+        "explanation": "",
+        "prefabid": 1746
+      },
+      {
+        "name": "游戏结束",
+        "id": "游戏结束",
+        "description": "游戏结束",
+        "parameters": [
+          "定点数"
+        ],
+        "explanation": "",
+        "prefabid": 1747
+      },
+      {
+        "name": "计时器到期（单次）",
+        "id": "计时器到期-单次",
+        "description": "经过{#0}秒后",
+        "parameters": [
+          "定点数"
+        ],
+        "explanation": "只会运行一次 在初始化/预设实体创建时开始计时，子触发器里则是以子触发器注册时开始",
+        "prefabid": 1748
+      },
+      {
+        "name": "计时器到期（循环）",
+        "id": "计时器到期-循环",
+        "description": "每经过{#0}秒后",
+        "parameters": [
+          "定点数"
+        ],
+        "explanation": "会一直运行下去，除非主动禁用触发器 在初始化/预设实体创建时开始计时，子触发器里则是以子触发器注册时开始",
+        "prefabid": 1749
+      },
+      {
+        "name": "接收自定义事件（全局）",
+        "id": "接收自定义事件-全局",
+        "description": "接收自定义事件： {#0}（全局）",
+        "parameters": [
+          "字符串"
+        ],
+        "explanation": "监听所有向关卡发送的事件，也包括组件或者触发区域发送出来的事件",
+        "prefabid": 1750
+      },
+      {
+        "name": "接收自定义事件（当前对象）",
+        "id": "接收自定义事件-当前对象",
+        "description": "接收自定义事件：{#0}（当前对象）",
+        "parameters": [
+          "字符串"
+        ],
+        "explanation": "监听目标为当前对象而发送出来的事件 不包括场景中组件，触发区域通过自身功能向外发送的事件",
+        "prefabid": 1751
+      },
+      {
+        "name": "接收界面自定义事件（当前对象）",
+        "id": "接收界面自定义事件-当前对象",
+        "description": "接收界面自定义事件：{#0}（当前对象）",
+        "parameters": [
+          "字符串"
+        ],
+        "explanation": "监听目标为当前对象而发送出来的界面事件",
+        "prefabid": 1752
+      },
+      {
+        "name": "时间戳到期",
+        "id": "时间戳到期",
+        "description": "到达 {#0} 后",
+        "parameters": [
+          "时间戳"
+        ],
+        "explanation": "时间戳指代的是真实的时间",
+        "prefabid": 1753
+      },
+      {
+        "name": "天空环境变化",
+        "id": "天空环境变化",
+        "description": "{#0}天空环境变化",
+        "parameters": [
+          "字符串"
+        ],
+        "explanation": "",
+        "prefabid": 1754
+      },
+      {
+        "name": "简易直线子弹到达目标",
+        "id": "简易直线子弹到达目标",
+        "description": "{#0}的直线子弹到达目标",
+        "parameters": [
+          "字符串"
+        ],
+        "explanation": "监听发射直线子弹的到达事件，通过字符串标记来确认该事件监听的子弹",
+        "prefabid": 1755
+      },
+      {
+        "name": "指定组件互动按钮被按下",
+        "id": "指定组件互动按钮被按下",
+        "description": "{#0}的互动按钮被按下",
+        "parameters": [
+          "组件"
+        ],
+        "explanation": "在互动按钮被按下时，触发该事件",
+        "prefabid": 1756
+      },
+      {
+        "name": "指定组件被松开",
+        "id": "指定组件被松开",
+        "description": "{#0}被松开",
+        "parameters": [
+          "组件"
+        ],
+        "explanation": "",
+        "prefabid": 1757
+      },
+      {
+        "name": "指定组件被点击",
+        "id": "指定组件被点击",
+        "description": "{#0}被点击",
+        "parameters": [
+          "组件"
+        ],
+        "explanation": "",
+        "prefabid": 1758
+      },
+      {
+        "name": "指定组件受到伤害",
+        "id": "指定组件受到伤害",
+        "description": "{#0}受到伤害",
+        "parameters": [
+          "组件"
+        ],
+        "explanation": "",
+        "prefabid": 1759
+      },
+      {
+        "name": "角色进出组件的互动区域",
+        "id": "角色进出组件的互动区域",
+        "description": "角色{#0}{#1}的互动区域",
+        "parameters": [
+          "触发区域类型",
+          "组件"
+        ],
+        "explanation": "",
+        "prefabid": 1760
+      },
+      {
+        "name": "指定组件创建",
+        "id": "指定组件创建",
+        "description": "{#0}被创建",
+        "parameters": [
+          "组件"
+        ],
+        "explanation": "",
+        "prefabid": 1761
+      },
+      {
+        "name": "指定组件销毁",
+        "id": "指定组件销毁",
+        "description": "{#0}被销毁",
+        "parameters": [
+          "组件"
+        ],
+        "explanation": "",
+        "prefabid": 1762
+      },
+      {
+        "name": "指定组件被举起",
+        "id": "指定组件被举起",
+        "description": "{#0}被举起",
+        "parameters": [
+          "组件"
+        ],
+        "explanation": "",
+        "prefabid": 1763
+      },
+      {
+        "name": "指定组件被放下",
+        "id": "指定组件被放下",
+        "description": "{#0}被放下",
+        "parameters": [
+          "组件"
+        ],
+        "explanation": "",
+        "prefabid": 1764
+      },
+      {
+        "name": "指定组件发生碰撞",
+        "id": "指定组件发生碰撞",
+        "description": "{#0}发生碰撞",
+        "parameters": [
+          "组件"
+        ],
+        "explanation": "",
+        "prefabid": 1765
+      },
+      {
+        "name": "指定组件互动按钮被按下",
+        "id": "指定组件互动按钮被按下-1",
+        "description": "{#0}互动按钮被按下",
+        "parameters": [
+          "组件"
+        ],
+        "explanation": "",
+        "prefabid": 1766
+      },
+      {
+        "name": "指定组件的家具互动成功触发",
+        "id": "指定组件的家具互动成功触发",
+        "description": "{#0}的家具互动成功触发",
+        "parameters": [
+          "组件"
+        ],
+        "explanation": "",
+        "prefabid": 1767
+      },
+      {
+        "name": "指定角色/生物创建",
+        "id": "指定角色-生物创建",
+        "description": "{#0}创建",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "",
+        "prefabid": 1768
+      },
+      {
+        "name": "指定角色/生物销毁",
+        "id": "指定角色-生物销毁",
+        "description": "{#0}销毁",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "",
+        "prefabid": 1769
+      },
+      {
+        "name": "指定角色/生物开始移动",
+        "id": "指定角色-生物开始移动",
+        "description": "{#0}开始移动",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "",
+        "prefabid": 1770
+      },
+      {
+        "name": "指定角色/生物移动结束",
+        "id": "指定角色-生物移动结束",
+        "description": "{#0}移动结束",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "",
+        "prefabid": 1771
+      },
+      {
+        "name": "指定角色/生物前扑",
+        "id": "指定角色-生物前扑",
+        "description": "{#0}前扑",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "",
+        "prefabid": 1772
+      },
+      {
+        "name": "指定角色/生物滚动开始",
+        "id": "指定角色-生物滚动开始",
+        "description": "{#0}滚动开始",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "",
+        "prefabid": 1773
+      },
+      {
+        "name": "指定角色/生物滚动结束",
+        "id": "指定角色-生物滚动结束",
+        "description": "{#0}滚动结束",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "",
+        "prefabid": 1774
+      },
+      {
+        "name": "指定角色/生物跳跃",
+        "id": "指定角色-生物跳跃",
+        "description": "{#0}跳跃",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "",
+        "prefabid": 1775
+      },
+      {
+        "name": "指定角色/生物举起",
+        "id": "指定角色-生物举起",
+        "description": "{#0}举起",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "",
+        "prefabid": 1776
+      },
+      {
+        "name": "指定角色/生物放下",
+        "id": "指定角色-生物放下",
+        "description": "{#0}放下",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "",
+        "prefabid": 1777
+      },
+      {
+        "name": "指定角色/生物被举起",
+        "id": "指定角色-生物被举起",
+        "description": "{#0}被举起",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "",
+        "prefabid": 1778
+      },
+      {
+        "name": "指定角色/生物被放下",
+        "id": "指定角色-生物被放下",
+        "description": "{#0}被放下",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "",
+        "prefabid": 1779
+      },
+      {
+        "name": "指定角色/生物上载具",
+        "id": "指定角色-生物上载具",
+        "description": "{#0}上载具",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "",
+        "prefabid": 1780
+      },
+      {
+        "name": "指定角色/生物下载具",
+        "id": "指定角色-生物下载具",
+        "description": "{#0}下载具",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "",
+        "prefabid": 1781
+      },
+      {
+        "name": "指定角色/生物施放技能",
+        "id": "指定角色-生物施放技能",
+        "description": "{#0}施放技能",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "",
+        "prefabid": 1782
+      },
+      {
+        "name": "指定角色/生物升级",
+        "id": "指定角色-生物升级",
+        "description": "{#0}角色/生物升级",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "",
+        "prefabid": 1783
+      },
+      {
+        "name": "指定角色/生物获得经验",
+        "id": "指定角色-生物获得经验",
+        "description": "{#0}角色/生物获得经验",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "",
+        "prefabid": 1784
+      },
+      {
+        "name": "指定角色/生物造成伤害前",
+        "id": "指定角色-生物造成伤害前",
+        "description": "{#0}造成伤害前",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "扣除健康值之前触发该事件，可以在此事件下修改伤害来源，目标和值",
+        "prefabid": 1785
+      },
+      {
+        "name": "指定角色/生物造成伤害后",
+        "id": "指定角色-生物造成伤害后",
+        "description": "{#0}造成伤害后",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "扣除健康值之后触发该事件，目标可能因为伤害扣除已经被击败",
+        "prefabid": 1786
+      },
+      {
+        "name": "指定角色/生物受到伤害前",
+        "id": "指定角色-生物受到伤害前",
+        "description": "{#0}受到伤害前",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "扣除健康值之前触发该事件，可以在此事件下修改伤害来源，目标和值",
+        "prefabid": 1787
+      },
+      {
+        "name": "指定角色/生物受到伤害后",
+        "id": "指定角色-生物受到伤害后",
+        "description": "{#0}受到伤害后",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "扣除健康值之后触发该事件，目标可能因为伤害扣除已经被击败",
+        "prefabid": 1788
+      },
+      {
+        "name": "指定角色/生物被击败",
+        "id": "指定角色-生物被击败",
+        "description": "{#0}被击败",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "",
+        "prefabid": 1789
+      },
+      {
+        "name": "指定角色/生物即将被击败",
+        "id": "指定角色-生物即将被击败",
+        "description": "{#0}即将被击败",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "",
+        "prefabid": 1790
+      },
+      {
+        "name": "指定角色/生物发生碰撞开始",
+        "id": "指定角色-生物发生碰撞开始",
+        "description": "{#0}发生碰撞开始",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "碰撞只会因为受外力物体而出现，例如受外力物体之间互相碰撞或者运动组件触碰到受外力物体；默认角色和生物都是受外力物体，组件需要开启受外力属性",
+        "prefabid": 1791
+      },
+      {
+        "name": "指定角色/生物发生碰撞结束",
+        "id": "指定角色-生物发生碰撞结束",
+        "description": "{#0}发生碰撞结束",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "碰撞只会因为受外力物体而出现，例如受外力物体之间互相碰撞或者运动组件触碰到受外力物体；默认角色和生物都是受外力物体，组件需要开启受外力属性",
+        "prefabid": 1792
+      },
+      {
+        "name": "指定角色/生物抓举",
+        "id": "指定角色-生物抓举",
+        "description": "{#0} 抓举",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "当角色或生物尝试抓举时触发该事件，不考虑是否真的抓举到物体",
+        "prefabid": 1793
+      },
+      {
+        "name": "指定角色/生物 获得技能",
+        "id": "指定角色-生物-获得技能",
+        "description": "{#0} 获得技能",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "获得技能时，触发该事件",
+        "prefabid": 1794
+      },
+      {
+        "name": "指定角色/生物 失去技能",
+        "id": "指定角色-生物-失去技能",
+        "description": "{#0} 失去技能",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "失去技能时，触发该事件",
+        "prefabid": 1795
+      },
+      {
+        "name": "指定角色/生物 技能升级",
+        "id": "指定角色-生物-技能升级",
+        "description": "{#0} 技能升级",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "当技能等级提升时，触发该事件",
+        "prefabid": 1796
+      },
+      {
+        "name": "指定角色/生物 技能降级",
+        "id": "指定角色-生物-技能降级",
+        "description": "{#0} 技能降级",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "当技能等级降低时，触发该事件",
+        "prefabid": 1797
+      },
+      {
+        "name": "指定角色/生物互动按钮被按下",
+        "id": "指定角色-生物互动按钮被按下",
+        "description": "{#0}的互动按钮被按下",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "在互动按钮被按下时，触发该事件",
+        "prefabid": 1798
+      },
+      {
+        "name": "指定角色/生物 复活",
+        "id": "指定角色-生物-复活",
+        "description": "{#0} 复活",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "监听角色或生物的复活发生",
+        "prefabid": 1799
+      },
+      {
+        "name": "指定角色/生物 击败其他角色/生物",
+        "id": "指定角色-生物-击败其他角色-生物",
+        "description": "{#0}击败其他角色/生物",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "监听角色或生物去击败其他任意角色或生物时，触发该事件",
+        "prefabid": 1800
+      },
+      {
+        "name": "指定角色/生物持有物品槽位发生变化",
+        "id": "指定角色-生物持有物品槽位发生变化",
+        "description": "{#0}持有物品槽位发生变化",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "当角色或生物持有的物品在槽位中的位置发生变化会触发该事件",
+        "prefabid": 1801
+      },
+      {
+        "name": "指定角色即将获得物品事件",
+        "id": "指定角色即将获得物品事件",
+        "description": "{#0}即将获得物品",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1802
+      },
+      {
+        "name": "指定角色获得物品事件",
+        "id": "指定角色获得物品事件",
+        "description": "{#0}获得物品",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1803
+      },
+      {
+        "name": "指定角色失去物品事件",
+        "id": "指定角色失去物品事件",
+        "description": "{#0}失去物品",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1804
+      },
+      {
+        "name": "指定角色上载具",
+        "id": "指定角色上载具",
+        "description": "{#0}上载具",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1805
+      },
+      {
+        "name": "指定角色下载具",
+        "id": "指定角色下载具",
+        "description": "{#0}下载具",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1806
+      },
+      {
+        "name": "指定角色选中物品格",
+        "id": "指定角色选中物品格",
+        "description": "指定角色{#0}选中{#1}类型的第{#2}物品格",
+        "parameters": [
+          "角色蛋仔",
+          "物品槽位类型",
+          "整数"
+        ],
+        "explanation": "角色选中指定的物品格时触发该事件",
+        "prefabid": 1807
+      },
+      {
+        "name": "指定角色取消选中物品格",
+        "id": "指定角色取消选中物品格",
+        "description": "指定角色{#0}取消选中{#1}类型的第{#2}物品格",
+        "parameters": [
+          "角色蛋仔",
+          "物品槽位类型",
+          "整数"
+        ],
+        "explanation": "角色取消选中指定的物品格时触发该事件",
+        "prefabid": 1808
+      },
+      {
+        "name": "指定角色复位",
+        "id": "指定角色复位",
+        "description": "指定角色{#0}复位",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1809
+      },
+      {
+        "name": "指定角色进入关卡",
+        "id": "指定角色进入关卡",
+        "description": "指定角色{#0}进入关卡后",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1810
+      },
+      {
+        "name": "指定角色升级",
+        "id": "指定角色升级",
+        "description": "{#0}升级",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1811
+      },
+      {
+        "name": "指定角色获得经验",
+        "id": "指定角色获得经验",
+        "description": "{#0}获得经验",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1812
+      },
+      {
+        "name": "指定角色创建",
+        "id": "指定角色创建",
+        "description": "{#0}被创建",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1813
+      },
+      {
+        "name": "指定角色被击败",
+        "id": "指定角色被击败",
+        "description": "{#0}被击败",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1814
+      },
+      {
+        "name": "指定角色复活",
+        "id": "指定角色复活",
+        "description": "{#0}复活",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1815
+      },
+      {
+        "name": "指定角色即将被击败",
+        "id": "指定角色即将被击败",
+        "description": "{#0}即将被击败",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1816
+      },
+      {
+        "name": "指定角色抓举",
+        "id": "指定角色抓举",
+        "description": "{#0}抓举",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "角色发生抓举行为时触发该事件，不关心是否真的抓举到了物体",
+        "prefabid": 1817
+      },
+      {
+        "name": "指定角色跳跃",
+        "id": "指定角色跳跃",
+        "description": "{#0}跳跃",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1818
+      },
+      {
+        "name": "指定角色前扑",
+        "id": "指定角色前扑",
+        "description": "{#0}前扑",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1819
+      },
+      {
+        "name": "指定角色举起",
+        "id": "指定角色举起",
+        "description": "{#0}把其他物体举起",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1820
+      },
+      {
+        "name": "指定角色放下",
+        "id": "指定角色放下",
+        "description": "{#0}把其他物体放下",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1821
+      },
+      {
+        "name": "指定角色被举起",
+        "id": "指定角色被举起",
+        "description": "{#0}被举起",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1822
+      },
+      {
+        "name": "指定角色被放下",
+        "id": "指定角色被放下",
+        "description": "{#0}被放下",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1823
+      },
+      {
+        "name": "指定角色滚动开始",
+        "id": "指定角色滚动开始",
+        "description": "{#0}滚动开始",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1824
+      },
+      {
+        "name": "指定角色滚动结束",
+        "id": "指定角色滚动结束",
+        "description": "{#0}滚动结束",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1825
+      },
+      {
+        "name": "指定角色发生碰撞",
+        "id": "指定角色发生碰撞",
+        "description": "{#0}发生碰撞",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1826
+      },
+      {
+        "name": "指定生物即将获得物品事件",
+        "id": "指定生物即将获得物品事件",
+        "description": "{#0}即将获得物品",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "",
+        "prefabid": 1827
+      },
+      {
+        "name": "指定生物获得物品事件",
+        "id": "指定生物获得物品事件",
+        "description": "{#0}获得物品",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "",
+        "prefabid": 1828
+      },
+      {
+        "name": "指定生物失去物品事件",
+        "id": "指定生物失去物品事件",
+        "description": "{#0}失去物品",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "",
+        "prefabid": 1829
+      },
+      {
+        "name": "指定生物被松开",
+        "id": "指定生物被松开",
+        "description": "{#0}被松开",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "",
+        "prefabid": 1830
+      },
+      {
+        "name": "指定生物被点击",
+        "id": "指定生物被点击",
+        "description": "{#0}被点击",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "",
+        "prefabid": 1831
+      },
+      {
+        "name": "角色进出生物的互动区域",
+        "id": "角色进出生物的互动区域",
+        "description": "角色{#0}{#1}的互动区域",
+        "parameters": [
+          "触发区域类型",
+          "生物"
+        ],
+        "explanation": "",
+        "prefabid": 1832
+      },
+      {
+        "name": "指定生物创建",
+        "id": "指定生物创建",
+        "description": "{#0}被创建",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "",
+        "prefabid": 1833
+      },
+      {
+        "name": "指定生物被击败",
+        "id": "指定生物被击败",
+        "description": "{#0}被击败",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "",
+        "prefabid": 1834
+      },
+      {
+        "name": "指定生物复活",
+        "id": "指定生物复活",
+        "description": "{#0}复活",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "",
+        "prefabid": 1835
+      },
+      {
+        "name": "指定生物即将被击败",
+        "id": "指定生物即将被击败",
+        "description": "{#0}即将被击败",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "",
+        "prefabid": 1836
+      },
+      {
+        "name": "指定生物销毁",
+        "id": "指定生物销毁",
+        "description": "{#0}被销毁",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "",
+        "prefabid": 1837
+      },
+      {
+        "name": "指定生物抓举",
+        "id": "指定生物抓举",
+        "description": "{#0}抓举",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "生物发生抓举行为时触发该事件，不关心是否真的抓举到了物体",
+        "prefabid": 1838
+      },
+      {
+        "name": "指定生物举起",
+        "id": "指定生物举起",
+        "description": "{#0}举起",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "",
+        "prefabid": 1839
+      },
+      {
+        "name": "指定生物放下物体",
+        "id": "指定生物放下物体",
+        "description": "{#0}把其他物体放下",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "",
+        "prefabid": 1840
+      },
+      {
+        "name": "指定生物被举起",
+        "id": "指定生物被举起",
+        "description": "{#0}被举起",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "",
+        "prefabid": 1841
+      },
+      {
+        "name": "指定生物被放下",
+        "id": "指定生物被放下",
+        "description": "{#0}被放下",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "",
+        "prefabid": 1842
+      },
+      {
+        "name": "指定生物发生碰撞",
+        "id": "指定生物发生碰撞",
+        "description": "{#0}发生碰撞",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "",
+        "prefabid": 1843
+      },
+      {
+        "name": "角色进出逻辑体互动区域",
+        "id": "角色进出逻辑体互动区域",
+        "description": "角色{#0}{#1}的互动区域",
+        "parameters": [
+          "触发区域类型",
+          "逻辑体"
+        ],
+        "explanation": "",
+        "prefabid": 1844
+      },
+      {
+        "name": "指定逻辑体创建",
+        "id": "指定逻辑体创建",
+        "description": "{#0}被创建",
+        "parameters": [
+          "逻辑体"
+        ],
+        "explanation": "",
+        "prefabid": 1845
+      },
+      {
+        "name": "指定逻辑体销毁",
+        "id": "指定逻辑体销毁",
+        "description": "{#0}被销毁",
+        "parameters": [
+          "逻辑体"
+        ],
+        "explanation": "",
+        "prefabid": 1846
+      },
+      {
+        "name": "角色进出触发区域互动区域",
+        "id": "角色进出触发区域互动区域",
+        "description": "角色{#0}{#1}的互动区域",
+        "parameters": [
+          "触发区域类型",
+          "触发区域"
+        ],
+        "explanation": "",
+        "prefabid": 1847
+      },
+      {
+        "name": "指定触发区域互动按钮被按下",
+        "id": "指定触发区域互动按钮被按下",
+        "description": "{#0}的互动按钮被按下",
+        "parameters": [
+          "触发区域"
+        ],
+        "explanation": "在互动按钮被按下时，触发该事件",
+        "prefabid": 1848
+      },
+      {
+        "name": "物品进出指定触发区域",
+        "id": "物品进出指定触发区域",
+        "description": "物品{#0}{#1}触发区域",
+        "parameters": [
+          "触发区域类型",
+          "触发区域"
+        ],
+        "explanation": "物品进入或离开触发区域时会触发该事件",
+        "prefabid": 1849
+      },
+      {
+        "name": "角色/生物 进出指定触发区域",
+        "id": "角色-生物-进出指定触发区域",
+        "description": "角色/生物 {#0} {#1}",
+        "parameters": [
+          "触发区域类型",
+          "触发区域"
+        ],
+        "explanation": "",
+        "prefabid": 1850
+      },
+      {
+        "name": "指定触发区域创建",
+        "id": "指定触发区域创建",
+        "description": "{#0}被创建",
+        "parameters": [
+          "触发区域"
+        ],
+        "explanation": "",
+        "prefabid": 1851
+      },
+      {
+        "name": "指定触发区域销毁",
+        "id": "指定触发区域销毁",
+        "description": "{#0}被销毁",
+        "parameters": [
+          "触发区域"
+        ],
+        "explanation": "",
+        "prefabid": 1852
+      },
+      {
+        "name": "角色进出指定触发区域",
+        "id": "角色进出指定触发区域",
+        "description": "角色{#0}{#1}",
+        "parameters": [
+          "触发区域类型",
+          "触发区域"
+        ],
+        "explanation": "",
+        "prefabid": 1853
+      },
+      {
+        "name": "生物进出指定触发区域",
+        "id": "生物进出指定触发区域",
+        "description": "生物{#0}{#1}",
+        "parameters": [
+          "触发区域类型",
+          "触发区域"
+        ],
+        "explanation": "",
+        "prefabid": 1854
+      },
+      {
+        "name": "组件进出指定触发区域",
+        "id": "组件进出指定触发区域",
+        "description": "组件{#0}{#1}",
+        "parameters": [
+          "触发区域类型",
+          "触发区域"
+        ],
+        "explanation": "",
+        "prefabid": 1855
+      },
+      {
+        "name": "载具进出指定触发区域",
+        "id": "载具进出指定触发区域",
+        "description": "载具{#0}{#1}",
+        "parameters": [
+          "触发区域类型",
+          "触发区域"
+        ],
+        "explanation": "",
+        "prefabid": 1856
+      },
+      {
+        "name": "指定玩家陀螺仪发生变化",
+        "id": "指定玩家陀螺仪发生变化",
+        "description": "{#0}的陀螺仪发生变化",
+        "parameters": [
+          "玩家"
+        ],
+        "explanation": "开启玩家的陀螺仪监听后才能触发。",
+        "prefabid": 1857
+      },
+      {
+        "name": "指定玩家成就完成",
+        "id": "指定玩家成就完成",
+        "description": "{#0}完成成就",
+        "parameters": [
+          "玩家"
+        ],
+        "explanation": "指定玩家完成成就时触发",
+        "prefabid": 1858
+      },
+      {
+        "name": "指定玩家开始对话",
+        "id": "指定玩家开始对话",
+        "description": "{#0}开始对话",
+        "parameters": [
+          "玩家"
+        ],
+        "explanation": "",
+        "prefabid": 1859
+      },
+      {
+        "name": "指定玩家结束对话",
+        "id": "指定玩家结束对话",
+        "description": "{#0}结束对话",
+        "parameters": [
+          "玩家"
+        ],
+        "explanation": "",
+        "prefabid": 1860
+      },
+      {
+        "name": "玩家音量发生变化",
+        "id": "玩家音量发生变化",
+        "description": "{#0}语音音量发生变化",
+        "parameters": [
+          "玩家"
+        ],
+        "explanation": "",
+        "prefabid": 1861
+      },
+      {
+        "name": "玩家领取成就奖励",
+        "id": "玩家领取成就奖励",
+        "description": "{#0}领取{#1}成就奖励",
+        "parameters": [
+          "玩家",
+          "成就"
+        ],
+        "explanation": "",
+        "prefabid": 1862
+      },
+      {
+        "name": "玩家游戏胜利",
+        "id": "玩家游戏胜利",
+        "description": "{#0}游戏胜利",
+        "parameters": [
+          "玩家"
+        ],
+        "explanation": "监听玩家胜利的事件",
+        "prefabid": 1863
+      },
+      {
+        "name": "玩家游戏失败",
+        "id": "玩家游戏失败",
+        "description": "{#0}游戏失败",
+        "parameters": [
+          "玩家"
+        ],
+        "explanation": "监听玩家失败的事件",
+        "prefabid": 1864
+      },
+      {
+        "name": "玩家离开游戏",
+        "id": "玩家离开游戏",
+        "description": "{#0}离开游戏",
+        "parameters": [
+          "玩家"
+        ],
+        "explanation": "监听玩家离开游戏的事件",
+        "prefabid": 1865
+      },
+      {
+        "name": "玩家阵营发生变化",
+        "id": "玩家阵营发生变化",
+        "description": "{#0}阵营变化",
+        "parameters": [
+          "玩家"
+        ],
+        "explanation": "",
+        "prefabid": 1866
+      },
+      {
+        "name": "任意玩家积分变化",
+        "id": "任意玩家积分变化",
+        "description": "任意玩家积分变化",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1867
+      },
+      {
+        "name": "任意阵营积分变化",
+        "id": "任意阵营积分变化",
+        "description": "任意阵营积分变化",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "",
+        "prefabid": 1868
+      },
+      {
+        "name": "指定角色技能升级",
+        "id": "指定角色技能升级",
+        "description": "{#0} 技能升级",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "当技能等级提升时，触发该事件",
+        "prefabid": 1869
+      },
+      {
+        "name": "指定角色技能降级",
+        "id": "指定角色技能降级",
+        "description": "{#0}的技能降级",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "当技能等级因为设置或者降低导致当前等级减少时，触发该事件",
+        "prefabid": 1870
+      },
+      {
+        "name": "指定角色获得技能",
+        "id": "指定角色获得技能",
+        "description": "{#0} 技能获得",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "获得技能时，触发该事件",
+        "prefabid": 1871
+      },
+      {
+        "name": "指定角色失去技能",
+        "id": "指定角色失去技能",
+        "description": "{#0} 技能失去",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "失去技能时，触发该事件",
+        "prefabid": 1872
+      },
+      {
+        "name": "指定角色施法阶段开始",
+        "id": "指定角色施法阶段开始",
+        "description": "{#0} 施法阶段开始",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "当技能施法阶段开始的时候，触发该事件",
+        "prefabid": 1873
+      },
+      {
+        "name": "指定角色施法阶段结束",
+        "id": "指定角色施法阶段结束",
+        "description": "{#0} 施法阶段结束",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "当技能施法时间走完后将触发结束事件",
+        "prefabid": 1874
+      },
+      {
+        "name": "指定角色施法阶段被打断",
+        "id": "指定角色施法阶段被打断",
+        "description": "{#0} 施法阶段被打断",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "当技能因为失控或自身行为中断技能的施法时，都将视为打断",
+        "prefabid": 1875
+      },
+      {
+        "name": "指定角色蓄力阶段开始",
+        "id": "指定角色蓄力阶段开始",
+        "description": "{#0} 蓄力阶段开始",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "当技能蓄力阶段开始的时候，触发该事件",
+        "prefabid": 1876
+      },
+      {
+        "name": "指定角色蓄力阶段结束",
+        "id": "指定角色蓄力阶段结束",
+        "description": "{#0} 蓄力阶段结束",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "当技能蓄力时间走完后将触发结束事件",
+        "prefabid": 1877
+      },
+      {
+        "name": "指定角色蓄力阶段被打断",
+        "id": "指定角色蓄力阶段被打断",
+        "description": "{#0} 蓄力阶段被打断",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "当技能因为取消，失控或自身行为中断技能的蓄力时，都将视为打断",
+        "prefabid": 1878
+      },
+      {
+        "name": "指定角色的技能冷却完成",
+        "id": "指定角色的技能冷却完成",
+        "description": "{#0}技能冷却结束",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "当技能冷却完成的时候触发该事件",
+        "prefabid": 1879
+      },
+      {
+        "name": "指定角色的技能充能完成",
+        "id": "指定角色的技能充能完成",
+        "description": "{#0}技能充能完成",
+        "parameters": [
+          "角色蛋仔"
+        ],
+        "explanation": "当技能充能完成的时候触发该事件",
+        "prefabid": 1880
+      },
+      {
+        "name": "指定生物的技能冷却完成",
+        "id": "指定生物的技能冷却完成",
+        "description": "{#0}技能冷却结束",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "当技能冷却完成的时候触发该事件",
+        "prefabid": 1881
+      },
+      {
+        "name": "指定生物的技能充能完成",
+        "id": "指定生物的技能充能完成",
+        "description": "{#0}技能充能完成",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "当技能充能完成的时候触发该事件",
+        "prefabid": 1882
+      },
+      {
+        "name": "指定生物技能升级",
+        "id": "指定生物技能升级",
+        "description": "{#0} 技能升级",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "当技能等级提升时，触发该事件",
+        "prefabid": 1883
+      },
+      {
+        "name": "指定生物技能降级",
+        "id": "指定生物技能降级",
+        "description": "{#0}的技能降级",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "当技能等级因为设置或者降低导致当前等级减少时，触发该事件",
+        "prefabid": 1884
+      },
+      {
+        "name": "指定生物获得技能",
+        "id": "指定生物获得技能",
+        "description": "{#0} 技能获得",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "获得技能时，触发该事件",
+        "prefabid": 1885
+      },
+      {
+        "name": "指定生物失去技能",
+        "id": "指定生物失去技能",
+        "description": "{#0} 技能失去",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "失去技能时，触发该事件",
+        "prefabid": 1886
+      },
+      {
+        "name": "指定生物施法阶段开始",
+        "id": "指定生物施法阶段开始",
+        "description": "{#0} 施法阶段开始",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "当技能施法阶段开始的时候，触发该事件",
+        "prefabid": 1887
+      },
+      {
+        "name": "指定生物施法阶段结束",
+        "id": "指定生物施法阶段结束",
+        "description": "{#0} 施法阶段结束",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "当技能施法时间走完后将触发结束事件",
+        "prefabid": 1888
+      },
+      {
+        "name": "指定生物施法阶段被打断",
+        "id": "指定生物施法阶段被打断",
+        "description": "{#0} 施法阶段被打断",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "当技能因为失控或自身行为中断技能的施法时，都将视为打断",
+        "prefabid": 1889
+      },
+      {
+        "name": "指定生物蓄力阶段开始",
+        "id": "指定生物蓄力阶段开始",
+        "description": "{#0} 蓄力阶段开始",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "当技能蓄力阶段开始的时候，触发该事件",
+        "prefabid": 1890
+      },
+      {
+        "name": "指定生物蓄力阶段结束",
+        "id": "指定生物蓄力阶段结束",
+        "description": "{#0} 蓄力阶段结束",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "当技能蓄力时间走完后将触发结束事件",
+        "prefabid": 1891
+      },
+      {
+        "name": "指定生物蓄力阶段被打断",
+        "id": "指定生物蓄力阶段被打断",
+        "description": "{#0} 蓄力阶段被打断",
+        "parameters": [
+          "生物"
+        ],
+        "explanation": "当技能因为取消，失控或自身行为中断技能的蓄力时，都将视为打断",
+        "prefabid": 1892
+      },
+      {
+        "name": "指定技能降级",
+        "id": "指定技能降级",
+        "description": "{#0}降级",
+        "parameters": [
+          "技能"
+        ],
+        "explanation": "当技能等级因为设置或者降低导致当前等级减少时，触发该事件",
+        "prefabid": 1893
+      },
+      {
+        "name": "指定技能冷却完成",
+        "id": "指定技能冷却完成",
+        "description": "{#0}技能冷却完成",
+        "parameters": [
+          "技能"
+        ],
+        "explanation": "当技能冷却完成的时候触发该事件",
+        "prefabid": 1894
+      },
+      {
+        "name": "指定技能充能完成",
+        "id": "指定技能充能完成",
+        "description": "{#0}技能充能完成",
+        "parameters": [
+          "技能"
+        ],
+        "explanation": "当技能充能完成的时候触发该事件",
+        "prefabid": 1895
+      },
+      {
+        "name": "指定技能的子弹命中",
+        "id": "指定技能的子弹命中",
+        "description": "{#0}技能的子弹命中目标",
+        "parameters": [
+          "技能"
+        ],
+        "explanation": "发射的子弹命中角色，生物或组件时会触发该事件",
+        "prefabid": 1896
+      },
+      {
+        "name": "指定技能被切换前",
+        "id": "指定技能被切换前",
+        "description": "{#0}被切换前",
+        "parameters": [
+          "技能"
+        ],
+        "explanation": "指定技能被切换前触发该事件",
+        "prefabid": 1897
+      },
+      {
+        "name": "指定技能切换后",
+        "id": "指定技能切换后",
+        "description": "{#0}切换后",
+        "parameters": [
+          "技能"
+        ],
+        "explanation": "发生技能切换为指定技能后触发该事件",
+        "prefabid": 1898
+      },
+      {
+        "name": "指定物品被销毁",
+        "id": "指定物品被销毁",
+        "description": "{#0}被销毁",
+        "parameters": [
+          "物品"
+        ],
+        "explanation": "物品被销毁时触发该事件",
+        "prefabid": 1899
+      },
+      {
+        "name": "指定物品堆叠层数变化",
+        "id": "指定物品堆叠层数变化",
+        "description": "{#0}堆叠层数变化",
+        "parameters": [
+          "物品"
+        ],
+        "explanation": "指定物品堆叠层数变化时触发该事件。",
+        "prefabid": 1900
+      },
+      {
+        "name": "指定物品即将被使用",
+        "id": "指定物品即将被使用",
+        "description": "{#0}即将被使用",
+        "parameters": [
+          "物品"
+        ],
+        "explanation": "指定物品被使用前会触发，可以用于阻止物品的使用。",
+        "prefabid": 1901
+      },
+      {
+        "name": "指定物品被选中",
+        "id": "指定物品被选中",
+        "description": "{#0}被选中",
+        "parameters": [
+          "物品"
+        ],
+        "explanation": "指定物品被选中时触发该事件",
+        "prefabid": 1902
+      },
+      {
+        "name": "指定物品被取消选中",
+        "id": "指定物品被取消选中",
+        "description": "{#0}被取消选中",
+        "parameters": [
+          "物品"
+        ],
+        "explanation": "指定物品被取消选中时触发该事件",
+        "prefabid": 1903
+      },
+      {
+        "name": "指定物品槽位变化",
+        "id": "指定物品槽位变化",
+        "description": "{#0}槽位变化",
+        "parameters": [
+          "物品"
+        ],
+        "explanation": "物品被持有时，所在槽位发生变化会触发该事件",
+        "prefabid": 1904
+      },
+      {
+        "name": "指定物品被 角色/生物获得",
+        "id": "指定物品被-角色-生物获得",
+        "description": "{#0}被 角色/生物 获得",
+        "parameters": [
+          "物品"
+        ],
+        "explanation": "指定物品被角色或生物获得时触发。如果获得的物品被自动堆叠，会返回堆叠的物品。",
+        "prefabid": 1905
+      },
+      {
+        "name": "指定物品被 角色/生物 失去",
+        "id": "指定物品被-角色-生物-失去",
+        "description": "{#0}被 角色/生物 失去",
+        "parameters": [
+          "物品"
+        ],
+        "explanation": "指定物品被角色或生物失去时触发。",
+        "prefabid": 1906
+      },
+      {
+        "name": "商店出售物品",
+        "id": "商店出售物品",
+        "description": "{#0}出售物品",
+        "parameters": [
+          "商店"
+        ],
+        "explanation": "当商店出售一个物品时，会触发该事件（付费道具不会触发该事件）",
+        "prefabid": 1907
+      },
+      {
+        "name": "商店收购物品",
+        "id": "商店收购物品",
+        "description": "{#0}收购物品",
+        "parameters": [
+          "商店"
+        ],
+        "explanation": "当玩家向商店出售一个物品时，会触发该事件",
+        "prefabid": 1908
+      },
+      {
+        "name": "手势区域滑动事件",
+        "id": "手势区域滑动事件",
+        "description": "{#0}滑动事件",
+        "parameters": [
+          "UI手势节点"
+        ],
+        "explanation": "玩家在界面编辑的手势区域控件内进行滑动时触发",
+        "prefabid": 1909
+      },
+      {
+        "name": "输入框结束输入",
+        "id": "输入框结束输入",
+        "description": "当{#0}结束输入",
+        "parameters": [
+          "可选：UI输入节点, 界面控件"
+        ],
+        "explanation": "在编辑界面中创建输入框控件来响应该事件。仅在输入结束时会触发一次该事件。",
+        "prefabid": 1910
+      },
+      {
+        "name": "指定道具箱创建",
+        "id": "指定道具箱创建",
+        "description": "{#0}被创建",
+        "parameters": [
+          "道具箱"
+        ],
+        "explanation": "道具箱创建时触发该事件",
+        "prefabid": 1911
+      },
+      {
+        "name": "指定道具箱销毁",
+        "id": "指定道具箱销毁",
+        "description": "{#0}被销毁",
+        "parameters": [
+          "道具箱"
+        ],
+        "explanation": "道具箱销毁是触发该事件",
+        "prefabid": 1912
+      },
+      {
+        "name": "指定角色/生物获得道具箱",
+        "id": "指定角色-生物获得道具箱",
+        "description": "{#0}获得道具箱",
+        "parameters": [
+          "角色I生物"
+        ],
+        "explanation": "",
+        "prefabid": 1913
+      },
+      {
+        "name": "任意玩家指定任务状态改变",
+        "id": "任意玩家指定任务状态改变",
+        "description": "任意玩家的{#0}达到{#1}",
+        "parameters": [
+          "任务",
+          "任务状态"
+        ],
+        "explanation": "当任意玩家该任务状态达到指定状态时（待接取、进行中、成功、失败、待提交）",
+        "prefabid": 1914
+      },
+      {
+        "name": "任意玩家指定任务开始指定步骤",
+        "id": "任意玩家指定任务开始指定步骤",
+        "description": "任意玩家的{#0}开始{#1}步骤",
+        "parameters": [
+          "任务",
+          "整数"
+        ],
+        "explanation": "当任意玩家该任务状态达到指定索引步骤时，此处输入步骤索引",
+        "prefabid": 1915
+      },
+      {
+        "name": "指定玩家指定任务状态改变",
+        "id": "指定玩家指定任务状态改变",
+        "description": "{#0}的{#1}达到{#2}",
+        "parameters": [
+          "玩家",
+          "任务",
+          "任务状态"
+        ],
+        "explanation": "当指定玩家该任务状态达到指定状态时（待接取、进行中、成功、失败、待提交）",
+        "prefabid": 1916
+      },
+      {
+        "name": "指定玩家任意任务状态改变",
+        "id": "指定玩家任意任务状态改变",
+        "description": "{#0}任意任务状态改变",
+        "parameters": [
+          "玩家"
+        ],
+        "explanation": "指定玩家该任务状态达到任意状态时（待接取、进行中、成功、失败、待提交）",
+        "prefabid": 1917
+      },
+      {
+        "name": "指定玩家指定任务开始指定步骤",
+        "id": "指定玩家指定任务开始指定步骤",
+        "description": "{#0}的{#1}开始{#2}步骤",
+        "parameters": [
+          "玩家",
+          "任务",
+          "整数"
+        ],
+        "explanation": "当指定玩家该任务状态达到指定索引步骤时，此处输入步骤索引",
+        "prefabid": 1918
+      },
+      {
+        "name": "指定玩家任意任务步骤开始",
+        "id": "指定玩家任意任务步骤开始",
+        "description": "{#0}开始任意任务步骤",
+        "parameters": [
+          "玩家"
+        ],
+        "explanation": "",
+        "prefabid": 1919
+      }
+    ],
+    "total_actions": 175
+  }
+}
