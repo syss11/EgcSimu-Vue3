@@ -310,7 +310,7 @@ onMounted(() => {
   border: 1px solid $border-color;
   border-radius: $border-radius-sm;
   font-size: $font-size-sm;
-  
+
   &:focus {
     outline: none;
     border-color: $primary;
@@ -334,5 +334,23 @@ onMounted(() => {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   user-select: none;
 }
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .selector {
+    padding: $spacing-sm;
+  }
+
+  .selector-section {
+    margin-bottom: $spacing-md;
+  }
+
+  .egcprefab {
+    height: 36px;
+    line-height: 36px;
+    font-size: small;
+  }
+
+}
+
 
 </style>

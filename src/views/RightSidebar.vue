@@ -89,7 +89,7 @@ function handleVariableClick() {
   height: 100%;
   background-color: $background;
   border-left: 2px solid $border-color;
-  overflow: hidden;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
 }
@@ -175,5 +175,44 @@ function handleVariableClick() {
     width: 40px;
     height: 40px;
   }
+}
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .nav-item {
+    flex-direction: row;
+    height: 40px;
+    padding: $spacing-xs $spacing-sm;
+    gap: 2px;
+  }
+
+  .nav-label {
+    font-size: 12px;
+  }
+
+  .nav-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .search-btn,
+  .variable-btn {
+    flex-direction: row;
+    height: 40px;
+    padding: $spacing-xs $spacing-sm;
+    gap: 2px;
+
+    .icon {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  .bottom-buttons {
+    flex-shrink: 0;
+    padding: 4px;
+    border-top: 1px solid $border-color;
+    
+    gap: 2px;
+}
 }
 </style>

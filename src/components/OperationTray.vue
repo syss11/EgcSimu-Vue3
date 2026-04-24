@@ -231,4 +231,24 @@ function handlePaste() {
   color: $text-secondary;
   transition: color $transition-fast;
 }
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .operation-tray {
+    padding: $spacing-xs;
+    gap: $spacing-xs;
+  }
+  
+  .operation-tray__button {
+    min-width: 40px;
+    padding: 2px;
+  }
+  
+  .operation-tray__icon {
+    font-size: $font-size-md;
+  }
+  
+  .operation-tray__label {
+    font-size: 10px;
+  }
+}
 </style>

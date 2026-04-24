@@ -165,4 +165,21 @@ const showTypeLimit = computed(() => {
   font-weight: 500;
 }
 
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .vacancy {
+    padding: 4px;
+    width: 160px;
+    height: 36px;
+  }
+
+  .v-vacancy {
+    padding: 12px;
+  }
+  
+  .type-limit {
+    font-size: 12px;
+  }
+}
+
 </style>

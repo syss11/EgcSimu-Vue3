@@ -74,7 +74,8 @@
         </div>
         <div class="about-modal-content">
           <p>EGC-Simu Vue3 是水杨酸酸基于Vue+TS重构的蛋码模拟器，可以在浏览器中高效、灵活运行。</p>
-          <p>版本：1.0.0</p>
+          <p>版本：1.0.1</p>
+          <a href="https://github.com/syss11/EgcSimu-Vue3" target="_blank" style="text-decoration: none;">GitHub 仓库</a>
           <p>作者：水杨酸酸</p>
           <p>© 2026 Salicylic. All rights reserved.</p>
         </div>
@@ -255,6 +256,7 @@ function handleRun() {
   display: flex;
   flex-direction: column;
   gap: $spacing-xs;
+  overflow-y: auto;
 }
 
 .control-btn {
@@ -364,4 +366,16 @@ function handleRun() {
 }
 
 
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .icon {
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+  }
+
+    
+  .control-btn {
+    gap: 2px;
+  }
+}
 </style>

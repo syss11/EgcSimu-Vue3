@@ -41,4 +41,13 @@ const noVacancy=computed(()=> props.assembly.eventonly && props.assembly.childre
   margin-bottom: $spacing-sm;
   color: $text-primary;
 }
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .assembly {
+    padding: 4px;
+  }
+  .assembly-title {
+    font-size: 16px;
+  }
+}
 </style>

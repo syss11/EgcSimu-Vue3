@@ -264,4 +264,12 @@ onMounted(() => {
     background-color: $background;
   }
 }
+
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+.header {
+  padding: $spacing-sm;
+  margin-bottom: $spacing-sm;
+}
+}
 </style>

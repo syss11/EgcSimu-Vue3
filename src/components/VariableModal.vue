@@ -347,4 +347,21 @@ function addVariable() {
     background-color: map.get($colors, ocean, 600);
   }
 }
+
+
+@media screen and (max-height: 500px) and (orientation: landscape){
+  .variable-modal {
+    width: 600px;
+    max-height: 90vh;
+  }
+  
+  .modal-body {
+    padding: $spacing-md;
+  }
+  
+  .add-variable-form {
+    padding-bottom: $spacing-md;
+    margin-bottom: $spacing-md;
+  }
+}
 </style>

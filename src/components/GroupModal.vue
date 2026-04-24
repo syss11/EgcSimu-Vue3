@@ -306,4 +306,20 @@ function handleDeleteGroup(groupId: string) {
     transform: scale(0.98);
   }
 }
+@media (max-height: 500px) and (orientation: landscape){
+  .group-modal {
+    width: 320px;
+    max-height: 80vh;
+  }
+  
+  .group-modal-content {
+    max-height: calc(80vh - 60px);
+    overflow-y: auto;
+  }
+  
+  .group-list {
+    max-height: 150px;
+    overflow-y: auto;
+  }
+}
 </style>

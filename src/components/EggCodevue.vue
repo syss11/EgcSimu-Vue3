@@ -230,5 +230,19 @@ function getValidator(item: EggCode): ((val: string) => boolean) | null {
 }
 
 
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .eggcodei {
+    min-height: 36px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  .egc-text {
+    font-size: 16px;
+  }
+  .egc-content {
+    gap: 2px;
+  }
+}
+
 
 </style>
