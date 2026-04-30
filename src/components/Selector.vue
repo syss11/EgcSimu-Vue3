@@ -236,10 +236,9 @@ function filterPrefabs(vacancy: EgcVacancy) {
 
 
 import { parseReturnTypeFromName } from '@/utils/transform'
-import { getidforVariable } from '@/utils/getid'
 import { registerPrefab } from '@/utils/prefabIdMap'
 import { EGC_BOOL_ENUM_IDS } from '@/types/constant'
-import { getActiveGroup, type Group } from '@/utils/groups'
+import { getActiveGroup } from '@/utils/groups'
 
 async function loadDataFiles() {
   const dataFiles = [

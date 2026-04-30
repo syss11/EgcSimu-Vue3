@@ -2,7 +2,6 @@
 import type { EgcPrefab } from '@/types/egcPrefab';
 import type { EggCode, EgcVacancy } from '@/types/eggCode';
 import mitt, { type Emitter } from 'mitt'
-import type { Group } from './groups';
 import type { Variable } from '@/store';
 
 // 1. 定义事件类型
