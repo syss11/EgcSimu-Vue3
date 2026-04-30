@@ -160,6 +160,8 @@
 import { ref } from 'vue'
 import { useEventBus } from '@/composables/useEventBus'
 import type { BaseValueType } from '@/types/egcTypes'
+import { getidforVariable } from '@/utils/getid'
+import { getActiveGroup } from '@/utils/groups'
 
 const { on, emit, EventTypes } = useEventBus()
 
@@ -196,6 +198,8 @@ function addVariable() {
   
   emit(EventTypes.ADD_VARIABLE_TO_SELECTOR, {
     variable: {
+      id: getidforVariable()(),
+      scope: getActiveGroup(),
       name: newVariable.value.name,
       domain: newVariable.value.domain,
       type: {

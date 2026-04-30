@@ -1,5 +1,6 @@
 import { strToSignature } from "@/utils/transform";
 import type { EgcType, ParamTypes, Signature, ValueType } from "./egcTypes"
+import type { Variable } from "@/store";
 
 
 
@@ -12,11 +13,12 @@ export class EgcPrefab {
     param_types: ParamTypes;
     description: string;
     return_type: ValueType | null;
+    variable?: Variable;
 
     constructor(type: EgcType, name: string,
         category:'prefab'|'enum'|'variable', id: number,
          signature: string, param_types: ParamTypes, description: string,
-          return_type: ValueType | null) {
+          return_type: ValueType | null, variable?: Variable) {
 
         this.type = type;
         this.category = category;
@@ -26,6 +28,7 @@ export class EgcPrefab {
         this.param_types = param_types;
         this.description = description;
         this.return_type = return_type;
+        this.variable = variable;
     }
 }
 

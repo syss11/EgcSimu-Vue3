@@ -44,7 +44,7 @@ import {
 } from '@/utils/transform'
 import type { EgcType, ValueType } from '@/types/egcTypes'
 import { useEventBus } from '@/composables/useEventBus'
-import { globalStore } from '@/store'
+import { globalStore, type Variable } from '@/store'
 import { EgcAssembly, type EgcVacancy } from '@/types/eggCode'
 
 interface EgcPrefab {
@@ -56,6 +56,7 @@ interface EgcPrefab {
   param_types: any
   description: string
   return_type: any
+  variable?: Variable
 }
 
 const prefabs = ref<EgcPrefab[]>([])
@@ -146,7 +147,7 @@ on(EventTypes.ADD_VARIABLE_TO_SELECTOR, ({ variable }) => {
     type: 'value',
     name: variable.name,
     category:'variable',
-    id: getidforVariable()(),
+    id: variable.id,
     signature: [{
       type: 'text',
       text: variable.name
@@ -157,7 +158,8 @@ on(EventTypes.ADD_VARIABLE_TO_SELECTOR, ({ variable }) => {
       type: variable.type.type,
       isArray: variable.type.isArray,
       isWeightPool: variable.type.isWeightPool
-    }
+    },
+    variable: variable
   }
   
   prefabs.value.push(newPrefab)
@@ -189,9 +191,14 @@ function filterPrefabs(vacancy: EgcVacancy) {
       }
     }
 
+    if (getActiveGroup() != prefab.variable?.scope && prefab.variable?.domain === 'local') {
+      return false
+    }
+
     if (vacancy.forVarOnly) {
       return prefab.category === 'variable'
     }
+    
     
     if (vacancy.forValue) {
       if (prefab.type !== 'value' && prefab.type !== 'boolean') {
@@ -232,6 +239,7 @@ import { parseReturnTypeFromName } from '@/utils/transform'
 import { getidforVariable } from '@/utils/getid'
 import { registerPrefab } from '@/utils/prefabIdMap'
 import { EGC_BOOL_ENUM_IDS } from '@/types/constant'
+import { getActiveGroup, type Group } from '@/utils/groups'
 
 async function loadDataFiles() {
   const dataFiles = [

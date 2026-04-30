@@ -48,7 +48,7 @@
         @click="handleRun"
       >
         <img src="@/assets/run.svg" class="icon" alt="run" />
-        <span class="label">运行</span>
+        <span class="label label-disabled">运行</span>
       </div>
       <div 
         class="control-btn"
@@ -73,7 +73,12 @@
           <button class="close-btn" @click="showAboutModal = false">×</button>
         </div>
         <div class="about-modal-content">
-          <p>EGC-Simu Vue3 是水杨酸酸基于Vue+TS重构的蛋码模拟器，可以在浏览器中高效、灵活运行。</p>
+          <p>EgcSimu Vue3</p>
+          <p>仿《蛋仔派对》工坊蛋码编辑器，网页前端实现。</p>
+          <p>使用Vue3+TS重构的蛋码模拟器，可以在浏览器中高效运行，提供便捷的蛋码编辑功能。</p>
+          <p>你可以根据蛋码编辑器的使用方法来进行拼蛋码，保存，撤回等操作。</p>
+          <p>如果发现部分类型错误，是正常现象，可反馈。</p>
+          <p>本项目目前只用于展示或教学演示功能，暂无法转换为可用蛋码。</p>
           <p>版本：1.0.1</p>
           <a href="https://github.com/syss11/EgcSimu-Vue3" target="_blank" style="text-decoration: none;">GitHub 仓库</a>
           <p>作者：水杨酸酸</p>
@@ -364,6 +369,12 @@ function handleRun() {
 .about-modal-content p {
   margin: $spacing-sm 0;
 }
+
+.label-disabled {
+  text-decoration: line-through;
+  color: #999;
+}
+
 
 
 @media screen and (max-height: 500px) and (orientation: landscape) {

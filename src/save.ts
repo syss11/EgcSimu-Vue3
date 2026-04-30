@@ -4,6 +4,8 @@ import type { ValueType } from "./types/egcTypes";
 import { getAllGroups, setAllGroups, type Group, projectmeta } from "./utils/groups";
 import { getPrefabById } from "./utils/prefabIdMap";
 import { EGC_SUBTRIGGER_ID } from "./types/constant";
+import { useEventBus } from "./composables/useEventBus";
+import { getAllVariables, type Variable } from "./store";
 
 export type SerializableType = 'vacancy' | 'eggCode' | 'eggCodeControl' | 'assembly' | 'group';
 
@@ -42,12 +44,25 @@ export interface SerializableGroup {
     assemblies: SerializableAssembly[];
 }
 
+export interface SerializableVariable {
+    id: number;
+    name: string;
+    domain: 'global' | 'local';
+    type: {
+        type: string;
+        isArray: boolean;
+        isWeightPool: boolean;
+    };
+    groupId?: string;
+}
+
 export interface SerializableSaveData {
     version: number;
     projectmeta: {
         name: string;
     };
     groups: SerializableGroup[];
+    variables: SerializableVariable[];
 }
 
 function vacancyToSerializable(vacancy: EgcVacancy): SerializableVacancy {
@@ -103,12 +118,38 @@ function groupToSerializable(group: Group): SerializableGroup {
     };
 }
 
+function variableToSerializable(variable: Variable): SerializableVariable {
+    return {
+        id: variable.id,
+        name: variable.name,
+        domain: variable.domain,
+        type: variable.type,
+        groupId: variable.scope?.id,
+    };
+}
+
+const { emit, EventTypes } = useEventBus()
+
+function deserializeVariable(data: SerializableVariable): void {
+    emit(EventTypes.ADD_VARIABLE_TO_SELECTOR, {
+        variable: {
+            id: data.id,
+            scope: getAllGroups().find(g => g.id === data.groupId) as Group,
+            name: data.name,
+            domain: data.domain,
+            type: data.type,
+        }
+    });
+}
+
 export function saveToJson(): string {
     const groups = getAllGroups();
+    const variables = getAllVariables();
     const saveData: SerializableSaveData = {
         version: 1,
         projectmeta: projectmeta.value,
         groups: groups.map(groupToSerializable),
+        variables: variables.map(variableToSerializable),
     };
     return JSON.stringify(saveData, null, 2);
 }
@@ -222,16 +263,21 @@ export function loadFromJson(jsonString: string): boolean {
     try {
         const data = JSON.parse(jsonString) as SerializableSaveData;
 
-        if (!data.groups || !Array.isArray(data.groups)) {
-            throw new Error('Invalid save data: missing groups');
-        }
-
         if (data.projectmeta) {
             projectmeta.value = data.projectmeta;
         }
 
+        if (data.variables && Array.isArray(data.variables)) {
+            data.variables.forEach(deserializeVariable);
+        }
+
+        if (!data.groups || !Array.isArray(data.groups)) {
+            throw new Error('Invalid save data: missing groups');
+        }
+
         const groups = data.groups.map(deserializeGroup);
         setAllGroups(groups);
+
         return true;
     } catch (error) {
         console.error('Failed to load save data:', error);
@@ -258,3 +304,7 @@ export function loadSaveFile(file: File): Promise<boolean> {
         reader.readAsText(file);
     });
 }
+
+
+
+

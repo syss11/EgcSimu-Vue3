@@ -2,6 +2,8 @@
 import type { EgcPrefab } from '@/types/egcPrefab';
 import type { EggCode, EgcVacancy } from '@/types/eggCode';
 import mitt, { type Emitter } from 'mitt'
+import type { Group } from './groups';
+import type { Variable } from '@/store';
 
 // 1. 定义事件类型
 export type EventMap = {
@@ -26,15 +28,7 @@ export type EventMap = {
     'open-variable-modal': {},
     // 添加变量到选择器
     'add-variable-to-selector': {
-      variable: {
-        name: string
-        domain: 'global' | 'local'
-        type: {
-          type: string
-          isArray: boolean
-          isWeightPool: boolean
-        }
-      }
+      variable: Variable
     },
     // 显示提示框
     'show-toast': {
